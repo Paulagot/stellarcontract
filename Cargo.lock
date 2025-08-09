@@ -754,15 +754,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "78ca9ab1a0babb1e7d5695e3530886289c18cf2f87ec19a575a0abdce112e3a3"
 
 [[package]]
-name = "nft-enumerable-example"
-version = "0.0.1"
-dependencies = [
- "soroban-sdk",
- "stellar-macros",
- "stellar-tokens",
-]
-
-[[package]]
 name = "num-bigint"
 version = "0.4.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1303,13 +1294,6 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 name = "stellar-contract-utils"
 version = "0.4.1"
 source = "git+https://github.com/OpenZeppelin/stellar-contracts?tag=v0.4.1#73dcd379772b87cd5a14f549d64dc764eb9a48d7"
-dependencies = [
- "soroban-sdk",
-]
-
-[[package]]
-name = "stellar-hello-world-contract"
-version = "0.0.1"
 dependencies = [
  "soroban-sdk",
 ]

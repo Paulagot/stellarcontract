@@ -1,0 +1,1 @@
+/home/paulag/test-fix/target/wasm32v1-none/release/quiz.wasm: /home/paulag/test-fix/contracts/quiz/src/contract.rs /home/paulag/test-fix/contracts/quiz/src/lib.rs /home/paulag/test-fix/contracts/quiz/src/test.rs

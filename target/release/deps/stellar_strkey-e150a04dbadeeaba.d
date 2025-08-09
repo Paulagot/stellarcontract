@@ -1,0 +1,17 @@
+/home/paulag/test-fix/target/release/deps/stellar_strkey-e150a04dbadeeaba.d: /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/lib.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/convert.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/crc.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/ed25519.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/error.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/strkey.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/typ.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/version.rs
+
+/home/paulag/test-fix/target/release/deps/libstellar_strkey-e150a04dbadeeaba.rlib: /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/lib.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/convert.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/crc.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/ed25519.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/error.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/strkey.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/typ.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/version.rs
+
+/home/paulag/test-fix/target/release/deps/libstellar_strkey-e150a04dbadeeaba.rmeta: /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/lib.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/convert.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/crc.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/ed25519.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/error.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/strkey.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/typ.rs /home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/version.rs
+
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/lib.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/convert.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/crc.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/ed25519.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/error.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/strkey.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/typ.rs:
+/home/paulag/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/stellar-strkey-0.0.9/src/version.rs:
+
+# env-dep:CARGO_PKG_VERSION=0.0.9
+# env-dep:GIT_REVISION=9b58e04ec31afd40e352c8179376729c2852a430

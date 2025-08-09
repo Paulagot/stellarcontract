@@ -1,0 +1,10 @@
+/home/paulag/test-fix/target/release/deps/stellar_macros-987cf710de7ae03e.d: /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/lib.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/access_control.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/default_impl_macro.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/helpers.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/pausable.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/upgradeable.rs
+
+/home/paulag/test-fix/target/release/deps/libstellar_macros-987cf710de7ae03e.so: /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/lib.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/access_control.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/default_impl_macro.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/helpers.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/pausable.rs /home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/upgradeable.rs
+
+/home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/lib.rs:
+/home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/access_control.rs:
+/home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/default_impl_macro.rs:
+/home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/helpers.rs:
+/home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/pausable.rs:
+/home/paulag/.cargo/git/checkouts/stellar-contracts-23b9f8e80f2c4738/73dcd37/packages/macros/src/upgradeable.rs:
