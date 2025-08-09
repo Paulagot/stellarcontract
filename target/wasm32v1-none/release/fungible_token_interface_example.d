@@ -1,1 +1,0 @@
-/home/paulag/test-fix/target/wasm32v1-none/release/fungible_token_interface_example.wasm: /home/paulag/test-fix/contracts/fungible-token-interface/src/contract.rs /home/paulag/test-fix/contracts/fungible-token-interface/src/lib.rs /home/paulag/test-fix/contracts/fungible-token-interface/src/test.rs
