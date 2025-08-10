@@ -1,0 +1,114 @@
+{
+  "generators": {
+    "address": 6,
+    "nonce": 0
+  },
+  "auth": [
+    [],
+    [
+      [
+        "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBQY",
+        {
+          "function": {
+            "contract_fn": {
+              "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+              "function_name": "join_room",
+              "args": [
+                {"u32": 1},
+                {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBQY"},
+                {"string": "QuizMaster"},
+                {"i128": {"hi": 0, "lo": 500000}}
+              ]
+            }
+          },
+          "sub_invocations": [
+            {
+              "function": {
+                "contract_fn": {
+                  "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                  "function_name": "transfer",
+                  "args": [
+                    {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBQY"},
+                    {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"},
+                    {"i128": {"hi": 0, "lo": 2500000}}
+                  ]
+                }
+              },
+              "sub_invocations": []
+            }
+          ]
+        }
+      ]
+    ]
+  ],
+  "ledger": {
+    "protocol_version": 20,
+    "sequence_number": 1001,
+    "timestamp": 1700000001,
+    "network_id": "0000000000000000000000000000000000000000000000000000000000000000",
+    "base_reserve": 5000000,
+    "min_persistent_entry_ttl": 4096,
+    "min_temp_entry_ttl": 16,
+    "max_entry_ttl": 6312000,
+    "ledger_entries": [
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": {
+              "vec": [
+                {"symbol": "config"},
+                {"bytes": "0000000000000000000000000000000000000000000000000000000000000001"}
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 1001,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": {
+                  "vec": [
+                    {"symbol": "config"},
+                    {"bytes": "0000000000000000000000000000000000000000000000000000000000000001"}
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "instance": {
+                    "room_id": {"bytes": "0000000000000000000000000000000000000000000000000000000000000001"},
+                    "host": {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM"},
+                    "player_count": {"u32": 1},
+                    "total_pool": {"i128": {"hi": 0, "lo": 2500000}},
+                    "total_entry_fees": {"i128": {"hi": 0, "lo": 2000000}},
+                    "total_extras_fees": {"i128": {"hi": 0, "lo": 500000}}
+                  }
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ]
+    ]
+  },
+  "events": [
+    {
+      "type": "contract", 
+      "contract_id": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+      "topics": [
+        {"symbol": "player_joined"},
+        {"u32": 1},
+        {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGBQY"},
+        {"string": "QuizMaster"},
+        {"i128": {"hi": 0, "lo": 2500000}}
+      ],
+      "data": "void"
+    }
+  ]
+}

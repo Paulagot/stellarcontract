@@ -1,4 +1,4 @@
-//! Fungible Pausable Example Contract.
+//! Fungible Pausable Example Contract with Public Rate-Limited Minting.
 //!
 //! This contract replicates the functionality of the contract in
 //! "examples/fungible-pausable", offering the same features. The key difference
@@ -8,10 +8,8 @@
 //! [`stellar_tokens::fungible_burnable::FungibleBurnable`], whereas this
 //! version directly implements [`soroban_sdk::token::TokenInterface`].
 //!
-//! Ultimately, it is up to the user to choose their preferred approach to
-//! creating a SEP-41 token. We suggest the approach in
-//! "examples/fungible-pausable" for better organization of the code,
-//! consistency and ease of inspection/debugging.
+//! This version has been modified to allow public minting with rate limiting
+//! to prevent abuse while maintaining token supply control.
 
 use soroban_sdk::{
     contract, contracterror, contractimpl, panic_with_error, symbol_short, token::TokenInterface,
@@ -22,6 +20,9 @@ use stellar_macros::when_not_paused;
 use stellar_tokens::fungible::Base;
 
 pub const OWNER: Symbol = symbol_short!("OWNER");
+pub const LAST_MINT: Symbol = symbol_short!("LAST_MINT");
+pub const MINT_COOLDOWN: u64 = 86400; // 24 hours in seconds
+pub const MAX_MINT_AMOUNT: i128 = 1000_0000000000000000; // 1000 tokens (18 decimals)
 
 #[contract]
 pub struct ExampleContract;
@@ -31,6 +32,8 @@ pub struct ExampleContract;
 #[repr(u32)]
 pub enum ExampleContractError {
     Unauthorized = 1,
+    ExceedsMaxMint = 2,
+    MintCooldownActive = 3,
 }
 
 #[contractimpl]
@@ -47,8 +50,38 @@ impl ExampleContract {
         Base::total_supply(e)
     }
 
+    /// Public mint function with rate limiting.
+    /// Anyone can mint tokens to their own address with daily limits.
     #[when_not_paused]
     pub fn mint(e: &Env, account: Address, amount: i128) {
+        // Users can only mint to themselves
+        account.require_auth();
+        
+        // Enforce maximum mint amount per transaction
+        if amount > MAX_MINT_AMOUNT {
+            panic_with_error!(e, ExampleContractError::ExceedsMaxMint);
+        }
+        
+        // Check cooldown period
+        let current_time = e.ledger().timestamp();
+        let last_mint_key = (LAST_MINT, account.clone());
+        
+        if let Some(last_mint_time) = e.storage().persistent().get::<(Symbol, Address), u64>(&last_mint_key) {
+            if current_time - last_mint_time < MINT_COOLDOWN {
+                panic_with_error!(e, ExampleContractError::MintCooldownActive);
+            }
+        }
+        
+        // Update last mint time
+        e.storage().persistent().set(&last_mint_key, &current_time);
+        
+        Base::mint(e, &account, amount);
+    }
+
+    /// Owner-only mint function for administrative purposes.
+    /// Allows the owner to mint without restrictions.
+    #[when_not_paused]
+    pub fn admin_mint(e: &Env, account: Address, amount: i128) {
         // When `ownable` module is available,
         // the following checks should be equivalent to:
         // `ownable::only_owner(&e);`
@@ -56,6 +89,32 @@ impl ExampleContract {
         owner.require_auth();
 
         Base::mint(e, &account, amount);
+    }
+
+    /// Get the remaining cooldown time for an account.
+    /// Returns 0 if the account can mint immediately.
+    pub fn get_mint_cooldown(e: &Env, account: Address) -> u64 {
+        let current_time = e.ledger().timestamp();
+        let last_mint_key = (LAST_MINT, account);
+        
+        if let Some(last_mint_time) = e.storage().persistent().get::<(Symbol, Address), u64>(&last_mint_key) {
+            let time_elapsed = current_time - last_mint_time;
+            if time_elapsed < MINT_COOLDOWN {
+                return MINT_COOLDOWN - time_elapsed;
+            }
+        }
+        
+        0
+    }
+
+    /// Get the maximum amount that can be minted per transaction.
+    pub fn get_max_mint_amount(e: &Env) -> i128 {
+        MAX_MINT_AMOUNT
+    }
+
+    /// Get the cooldown period in seconds.
+    pub fn get_mint_cooldown_period(e: &Env) -> u64 {
+        MINT_COOLDOWN
     }
 }
 

@@ -1,0 +1,110 @@
+{
+  "generators": {
+    "address": 4,
+    "nonce": 0
+  },
+  "auth": [
+    [],
+    [
+      [
+        "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM",
+        {
+          "function": {
+            "contract_fn": {
+              "contract_address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+              "function_name": "init_pool_room",
+              "args": [
+                {"u32": 1},
+                {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM"},
+                {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"},
+                {"i128": {"hi": 0, "lo": 2000000}},
+                {"option": {"some": {"u32": 250}}},
+                {"u32": 2000},
+                {"u32": 50},
+                {"option": {"some": {"u32": 30}}},
+                {"option": {"some": {"u32": 20}}}
+              ]
+            }
+          },
+          "sub_invocations": []
+        }
+      ]
+    ]
+  ],
+  "ledger": {
+    "protocol_version": 20,
+    "sequence_number": 1000,
+    "timestamp": 1700000000,
+    "network_id": "0000000000000000000000000000000000000000000000000000000000000000",
+    "base_reserve": 5000000,
+    "min_persistent_entry_ttl": 4096,
+    "min_temp_entry_ttl": 16,
+    "max_entry_ttl": 6312000,
+    "ledger_entries": [
+      [
+        {
+          "contract_data": {
+            "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+            "key": {
+              "vec": [
+                {"symbol": "config"},
+                {"bytes": "0000000000000000000000000000000000000000000000000000000000000001"}
+              ]
+            },
+            "durability": "persistent"
+          }
+        },
+        [
+          {
+            "last_modified_ledger_seq": 1000,
+            "data": {
+              "contract_data": {
+                "ext": "v0",
+                "contract": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+                "key": {
+                  "vec": [
+                    {"symbol": "config"},
+                    {"bytes": "0000000000000000000000000000000000000000000000000000000000000001"}
+                  ]
+                },
+                "durability": "persistent",
+                "val": {
+                  "instance": {
+                    "room_id": {"bytes": "0000000000000000000000000000000000000000000000000000000000000001"},
+                    "host": {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM"},
+                    "fee_token": {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4"},
+                    "entry_fee": {"i128": {"hi": 0, "lo": 2000000}},
+                    "host_fee_bps": {"u32": 250},
+                    "prize_pool_bps": {"u32": 2000},
+                    "charity_bps": {"u32": 5750},
+                    "prize_mode": "PrizePoolSplit",
+                    "ended": false,
+                    "player_count": {"u32": 0},
+                    "total_pool": {"i128": {"hi": 0, "lo": 0}}
+                  }
+                }
+              }
+            },
+            "ext": "v0"
+          },
+          4095
+        ]
+      ]
+    ]
+  },
+  "events": [
+    {
+      "type": "contract",
+      "contract_id": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFCT4",
+      "topics": [
+        {"symbol": "pool_room_created"},
+        {"u32": 1},
+        {"address": "CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD2KM"},
+        {"i128": {"hi": 0, "lo": 2000000}},
+        {"u32": 250},
+        {"u32": 2000}
+      ],
+      "data": "void"
+    }
+  ]
+}
